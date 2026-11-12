@@ -1,0 +1,9 @@
+project: savantenvs/betaflight
+target: fuzz_rx_xbus
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rx_xbus/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rx_xbus
+    libfuzzer: true
+    timeout: 30

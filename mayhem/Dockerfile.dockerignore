@@ -1,0 +1,8 @@
+# Keep .git (the grader uses history); drop local build outputs and editor noise.
+obj/
+/fuzz_*
+/crash-*
+/ctrf-report.json
+.DS_Store
+*.swp
+*~

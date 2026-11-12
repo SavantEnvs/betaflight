@@ -1,0 +1,9 @@
+project: savantenvs/betaflight
+target: fuzz_msp_serial
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_msp_serial/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_msp_serial
+    libfuzzer: true
+    timeout: 30

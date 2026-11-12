@@ -1,0 +1,9 @@
+project: savantenvs/betaflight
+target: fuzz_uvarint
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_uvarint/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_uvarint
+    libfuzzer: true
+    timeout: 30
